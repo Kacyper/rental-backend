@@ -10,6 +10,7 @@ import com.kacyper.carrentalbackend.exceptions.UserNotFoundException;
 import com.kacyper.carrentalbackend.mapper.RentalMapper;
 import com.kacyper.carrentalbackend.repository.RentalRepository;
 import com.kacyper.carrentalbackend.service.RentalService;
+import com.kacyper.carrentalbackend.service.mailService.MailToUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

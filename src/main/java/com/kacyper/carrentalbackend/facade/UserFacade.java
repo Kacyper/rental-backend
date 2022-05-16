@@ -1,12 +1,17 @@
 package com.kacyper.carrentalbackend.facade;
 
+import com.kacyper.carrentalbackend.domain.Login;
 import com.kacyper.carrentalbackend.domain.User;
 import com.kacyper.carrentalbackend.dto.UserDto;
+import com.kacyper.carrentalbackend.dto.api.mail.MailVerifierDto;
 import com.kacyper.carrentalbackend.exceptions.LoginNotFoundException;
 import com.kacyper.carrentalbackend.exceptions.UserNotFoundException;
 import com.kacyper.carrentalbackend.exceptions.WrongEmailException;
 import com.kacyper.carrentalbackend.mapper.UserMapper;
+import com.kacyper.carrentalbackend.service.LoginService;
 import com.kacyper.carrentalbackend.service.UserService;
+import com.kacyper.carrentalbackend.service.mailService.MailToUserService;
+import com.kacyper.carrentalbackend.service.mailService.MailVerificationService;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

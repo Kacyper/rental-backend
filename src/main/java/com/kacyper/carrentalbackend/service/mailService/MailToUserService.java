@@ -1,5 +1,6 @@
 package com.kacyper.carrentalbackend.service.mailService;
 
+import com.kacyper.carrentalbackend.config.AdminConfiguration;
 import com.kacyper.carrentalbackend.domain.Mail;
 import com.kacyper.carrentalbackend.domain.Rental;
 import com.kacyper.carrentalbackend.domain.User;
