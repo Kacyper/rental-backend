@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class MailConfiguration {
 
     @Bean
-    public EmailScheduler numberOfRentsSchedule(MailSenderService mailSenderService, AdminConfiguration adminConfiguration, @Qualifier("numberOfRents") MailBodyService mailBodyService) {
+    public EmailScheduler numberOfRentsSchedule(MailSenderService mailSenderService, AdminConfiguration adminConfiguration, @Qualifier("adminMail") MailBodyService mailBodyService) {
         return new EmailScheduler(mailSenderService, adminConfiguration, mailBodyService);
     }
 }
