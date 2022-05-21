@@ -46,6 +46,10 @@ dependencies {
 
     testImplementation 'org.mockito:mockito-junit-jupiter:4.5.0'
 
+
+    compileOnly 'com.mashape.unirest:unirest-java:1.4.9'
+    compileOnly 'net.sargue:mailgun:1.9.0'
+
 }
 
 test {
