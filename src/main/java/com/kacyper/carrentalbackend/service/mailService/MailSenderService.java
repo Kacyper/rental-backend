@@ -23,7 +23,6 @@ public class MailSenderService {
             log.error("Email hasn't been sent. Something went wrong: " + e.getMessage(), e);
         }
     }
-
     private SimpleMailMessage createMessage(final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
