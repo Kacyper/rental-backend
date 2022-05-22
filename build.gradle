@@ -47,8 +47,9 @@ dependencies {
     testImplementation 'org.mockito:mockito-junit-jupiter:4.5.0'
 
     implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.3'
-    implementation 'org.jasypt:jasypt:1.9.3'}
-
-test {
-    useJUnitPlatform()
+    implementation 'org.jasypt:jasypt:1.9.3'
 }
+
+    test {
+        useJUnitPlatform()
+    }
