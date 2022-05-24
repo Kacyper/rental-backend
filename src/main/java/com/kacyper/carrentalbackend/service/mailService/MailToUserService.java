@@ -62,11 +62,11 @@ public class MailToUserService {
 
     private String rentMessage(Rental rental, String messageType) {
         return ("Hi " +rental.getUser().getFirstName() + ", " + "\n" +
-                "\n Your rental has been " + messageType + ". Here are the details: \n" +
+                "\n Your rental has been " + messageType + ".\n Here are the details: \n" +
                 "\n Rental ID: " + rental.getId() + "\n Your rental starts: " + rental.getRentedFrom() +
                 "\n and it ends: " + rental.getRentedTo() + "\n Rental will last for: " + rental.getDuration() + "days" +
-                "\n That will cost you: " + rental.getCost() + " PLN" + "\n And the car you will be driving is following " +
-                rental.getCar().getCarManufacture() + " - " + rental.getCar().getModel() + "\n" +
+                "\n That will cost you: " + rental.getCost() + " PLN" + "\n And the car you will be driving is following" +
+                "\n" + rental.getCar().getCarManufacture() + " - " + rental.getCar().getModel() + "\n" +
                 "\n Have a great day!" + "\n Thanks for choosing us! Drive safe!");
     }
 

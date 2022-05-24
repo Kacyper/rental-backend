@@ -25,4 +25,5 @@ public class RentalAllDto {
     private String userLastName;
     private String userEmail;
     private int userPhoneNumber;
+    private Long userId;
 }

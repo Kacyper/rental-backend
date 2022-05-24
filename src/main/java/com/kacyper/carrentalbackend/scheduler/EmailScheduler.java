@@ -21,7 +21,7 @@ public class EmailScheduler {
         this.mailBodyService = mailBodyService;
     }
 
-    @Scheduled(fixedDelay = 10000000)
+//    @Scheduled(fixedDelay = 10000000)
     public void sendInformationMail() {
         mailSenderService.sendMail(Mail.builder()
                 .mailTo(adminConfiguration.getAdminMail())

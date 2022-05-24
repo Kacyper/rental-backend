@@ -65,7 +65,7 @@ public class UserFacade {
 
     public UserDto updateUser(final UserDto userDto) throws WrongEmailException, LoginNotFoundException, UserNotFoundException {
         if (isMailInDB(userDto.getEmail())) {
-            updateLogin(userDto);
+//            updateLogin(userDto);
             User user = userMapper.mapToUser(userDto);
             user.setAccountCreationDate(LocalDate.now());
             return userMapper.mapToUserDto(userService.saveUser(user));
@@ -74,8 +74,7 @@ public class UserFacade {
         }
     }
 
-    public void deleteUser(final Long id) throws UserNotFoundException, LoginNotFoundException {
-        deleteLogin(id);
+    public void deleteUser(final Long id) {
         userService.deleteUser(id);
     }
 
@@ -99,13 +98,13 @@ public class UserFacade {
         ));
     }
 
-    public void updateLogin(UserDto userDto) throws LoginNotFoundException, UserNotFoundException {
-        User oldUser = userService.getUserById(userDto.getId());
-        Login oldUserLogin = loginService.getLoginByEmailAndPassword(oldUser.getEmail(), oldUser.getPassword());
-
-        oldUserLogin.setEmail(userDto.getEmail());
-        oldUserLogin.setPassword(userDto.getPassword());
-    }
+//    public void updateLogin(UserDto userDto) throws LoginNotFoundException, UserNotFoundException {
+//        User oldUser = userService.getUserById(userDto.getId());
+//        Login oldUserLogin = loginService.getLoginByEmailAndPassword(oldUser.getEmail(), oldUser.getPassword());
+//
+//        oldUserLogin.setEmail(userDto.getEmail());
+//        oldUserLogin.setPassword(userDto.getPassword());
+//    }
 
     public void deleteLogin(Long id) throws UserNotFoundException, LoginNotFoundException {
         User user = userService.getUserById(id);

@@ -22,7 +22,8 @@ public class RentalMapper {
                 rental.getUser().getFirstName(),
                 rental.getUser().getLastName(),
                 rental.getUser().getEmail(),
-                rental.getUser().getPhoneNumber());
+                rental.getUser().getPhoneNumber(),
+                rental.getUser().getId());
     }
 
     public List<RentalAllDto> mapToRentalAllDtoList(final List<Rental> rentalList) {

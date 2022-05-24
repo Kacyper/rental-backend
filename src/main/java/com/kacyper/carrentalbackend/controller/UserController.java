@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @DeleteMapping(value = "/deleteUser/{id}")
-    void deleteUser(@PathVariable Long id) throws UserNotFoundException, LoginNotFoundException {
+    void deleteUser(@PathVariable Long id) {
         userFacade.deleteUser(id);
     }
 
