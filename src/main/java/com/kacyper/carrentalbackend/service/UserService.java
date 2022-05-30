@@ -1,7 +1,6 @@
 package com.kacyper.carrentalbackend.service;
 
 import com.kacyper.carrentalbackend.domain.User;
-import com.kacyper.carrentalbackend.dto.UserDto;
 import com.kacyper.carrentalbackend.exceptions.UserNotFoundException;
 import com.kacyper.carrentalbackend.mapper.UserMapper;
 import com.kacyper.carrentalbackend.repository.UserRepository;
@@ -24,10 +23,6 @@ public class UserService {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
     }
-
-//    public User saveUser(final UserDto userDto) {
-//        return userRepository.save(userMapper.mapToUser(userDto));
-//    }
 
     public User saveUser(User user) {
         return userRepository.save(user);

@@ -4,7 +4,6 @@ import com.kacyper.carrentalbackend.domain.Login;
 import com.kacyper.carrentalbackend.domain.User;
 import com.kacyper.carrentalbackend.dto.UserDto;
 import com.kacyper.carrentalbackend.dto.api.mail.MailVerifierDto;
-import com.kacyper.carrentalbackend.exceptions.LoginNotFoundException;
 import com.kacyper.carrentalbackend.exceptions.UserNotFoundException;
 import com.kacyper.carrentalbackend.exceptions.WrongEmailException;
 import com.kacyper.carrentalbackend.mapper.UserMapper;
@@ -63,9 +62,8 @@ public class UserFacade {
         }
     }
 
-    public UserDto updateUser(final UserDto userDto) throws WrongEmailException, LoginNotFoundException, UserNotFoundException {
+    public UserDto updateUser(final UserDto userDto) throws WrongEmailException {
         if (isMailInDB(userDto.getEmail())) {
-//            updateLogin(userDto);
             User user = userMapper.mapToUser(userDto);
             user.setAccountCreationDate(LocalDate.now());
             return userMapper.mapToUserDto(userService.saveUser(user));
@@ -96,19 +94,5 @@ public class UserFacade {
                 userDto.getEmail(),
                 userDto.getPassword()
         ));
-    }
-
-//    public void updateLogin(UserDto userDto) throws LoginNotFoundException, UserNotFoundException {
-//        User oldUser = userService.getUserById(userDto.getId());
-//        Login oldUserLogin = loginService.getLoginByEmailAndPassword(oldUser.getEmail(), oldUser.getPassword());
-//
-//        oldUserLogin.setEmail(userDto.getEmail());
-//        oldUserLogin.setPassword(userDto.getPassword());
-//    }
-
-    public void deleteLogin(Long id) throws UserNotFoundException, LoginNotFoundException {
-        User user = userService.getUserById(id);
-        Login login = loginService.getLoginByEmailAndPassword(user.getEmail(), user.getPassword());
-        loginService.deleteLogin(login);
     }
 }

@@ -234,7 +234,8 @@ public class RentalFacadeTestSuite {
                 "John",
                 "Doe",
                 "mail",
-                123);
+                123,
+                1L);
 
         when(rentalService.extendRental(rentalToBeExtendedDto)).thenReturn(rental);
         when(rentalMapper.mapToRentalAllDto(rental)).thenReturn(extendedDto);

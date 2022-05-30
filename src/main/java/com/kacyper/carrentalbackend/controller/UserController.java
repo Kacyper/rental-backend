@@ -1,7 +1,6 @@
 package com.kacyper.carrentalbackend.controller;
 
 import com.kacyper.carrentalbackend.dto.UserDto;
-import com.kacyper.carrentalbackend.exceptions.LoginNotFoundException;
 import com.kacyper.carrentalbackend.exceptions.UserNotFoundException;
 import com.kacyper.carrentalbackend.exceptions.WrongEmailException;
 import com.kacyper.carrentalbackend.facade.UserFacade;
@@ -46,7 +45,7 @@ public class UserController {
     }
 
     @PutMapping(value = "/updateUser")
-    public UserDto updateUser(@RequestBody UserDto userDto) throws WrongEmailException, UserNotFoundException, LoginNotFoundException {
+    public UserDto updateUser(@RequestBody UserDto userDto) throws WrongEmailException {
         return userFacade.updateUser(userDto);
     }
 
