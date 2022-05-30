@@ -1,6 +1,6 @@
 <b> Hi, </b>
 
-<h1>Here's my car rental application.</h1>
+<h1>Here's my car rental (backend) application.</h1>
 
 <ul>
 -> You can rent a car and change dates afterwards.
