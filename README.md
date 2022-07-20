@@ -29,7 +29,7 @@ Clone backend https://github.com/Kacyper/rental-backend and here's link to front
 
 -> Set your admin email to receive admin mail from scheduler. 
 
--> You can add yourself with your own email to receive user's messages.
+-> You can add your own email to receive user's messages.
 
 -> Email sending is configured with mailgun. If you want you can change email address in line 32 in application.properties to receive messages from a different address, but it should all go through mailgun anyway. 
 
@@ -38,7 +38,7 @@ Clone backend https://github.com/Kacyper/rental-backend and here's link to front
 -> Next you can use swagger or use a link below to check controllers through POSTMAN.
 </ol>
 
-<b> I have implemented swagger to check controllers quicker, but below I provide a link to postman to access all request. </b>
+<b> I have implemented swagger to check controllers quicker, but below I provide a link to postman to access all requests. </b>
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6e5ec90bf6be53a47398?action=collection%2Fimport)
 
